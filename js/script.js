@@ -1,11 +1,8 @@
 var image = document.getElementById("image");
 var text = document.getElementById("text");
+var title = document.getElementById("title");
 var randomizeBtn = document.getElementById("randomizeBtn");
-
-// get data from data.json
-// on click of randomize button, randomize the data
-// if the data is same as the previous data, randomize again
-// update the image and text
+var previousRandom;
 
 randomizeBtn.addEventListener("click", function () {
   fetch("data.json")
@@ -14,7 +11,13 @@ randomizeBtn.addEventListener("click", function () {
     })
     .then(function (data) {
       var random = Math.floor(Math.random() * data.length);
+      while (random === previousRandom) {
+        random = Math.floor(Math.random() * data.length);
+      }
+      previousRandom = random;
       image.src = data[random].image;
       text.innerHTML = data[random].text;
+      title.innerHTML = data[random].title;
+      text.className = "random-image-text";
     });
 });

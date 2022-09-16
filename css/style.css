@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap");
 
 /* CSS Reset */
 *,
@@ -21,7 +21,7 @@ body {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
@@ -65,7 +65,7 @@ svg {
 }
 
 .brand-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 4.2rem;
   font-weight: 500;
   text-align: center;
@@ -80,8 +80,14 @@ svg {
 }
 
 .header-link {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
+  color: rgb(255, 255, 255);
+  background: #111;
+  padding: 10px 16px;
+  width: 15.5rem;
+  border-radius: 5px;
+  text-align: center;
 }
 
 /* Main-Content */
@@ -89,6 +95,10 @@ svg {
 .main {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.random-image-title {
+  margin-bottom: 5px;
 }
 
 .random-image {
@@ -113,6 +123,13 @@ svg {
   border-radius: 10px;
 }
 
+.intro-image-text {
+  flex: 1;
+  font-size: 2.2rem;
+  font-weight: bolder;
+  color: rgb(255, 251, 0);
+}
+
 .random-image-text {
   flex: 1;
   font-size: 1.8rem;
@@ -125,7 +142,7 @@ svg {
   margin: 0 auto;
   margin-top: 3.5rem;
   padding: 16px 32px;
-  border: none;
+  border: 2px solid #ffffff;
   outline: none;
   color: rgb(255, 255, 255);
   background: #111;
@@ -140,8 +157,8 @@ svg {
   font-weight: 500;
 }
 
-.random-image-btn:before {
-  content: '';
+/* .random-image-btn:before {
+  content: "";
   background: linear-gradient(
     45deg,
     #ff0000,
@@ -166,9 +183,9 @@ svg {
   animation: glowing-random-image-btn 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
-}
+} */
 
-@keyframes glowing-random-image-btn {
+/* @keyframes glowing-random-image-btn {
   0% {
     background-position: 0 0;
   }
@@ -178,11 +195,11 @@ svg {
   100% {
     background-position: 0 0;
   }
-}
+} */
 
-.random-image-btn:after {
+/* .random-image-btn:after {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -190,7 +207,7 @@ svg {
   left: 0;
   top: 0;
   border-radius: 10px;
-}
+} */
 
 @media (max-width: 950px) {
   .random-image {
@@ -224,5 +241,15 @@ svg {
 
   .random-image-text {
     text-align: center;
+  }
+  .intro-image-text {
+    text-align: center;
+  }
+  .random-image-title {
+    text-align: center;
+  }
+
+  .header-links {
+    column-gap: 2.5rem;
   }
 }
