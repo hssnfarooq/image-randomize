@@ -136,6 +136,12 @@ svg {
   font-weight: 500;
 }
 
+.random-image-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
 /* CSS */
 .random-image-btn {
   display: block;
