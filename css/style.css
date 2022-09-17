@@ -143,14 +143,8 @@ svg {
 }
 
 .random-image-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 5rem 2.5rem;
-}
-
-.random-image-item {
-  flex: 1 1 28rem;
 }
 
 .random-image-item > img {
